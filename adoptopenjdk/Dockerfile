@@ -1,9 +1,9 @@
-FROM adoptopenjdk/openjdk11:alpine-jre
+ARG TAG=jre
+FROM adoptopenjdk/openjdk11:$TAG
 
 ENV VERSION 0.2.10
 
-RUN mkdir -p /jmusicbot && \
-    wget -q -O /jmusicbot/JMusicBot.jar https://github.com/jagrosh/MusicBot/releases/download/$VERSION/JMusicBot-$VERSION-Linux.jar
+ADD https://github.com/jagrosh/MusicBot/releases/download/$VERSION/JMusicBot-$VERSION-Linux.jar /jmusicbot/JMusicBot.jar
 
 COPY config.txt /jmusicbot/config.txt
 
