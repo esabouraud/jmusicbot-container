@@ -1,6 +1,6 @@
 FROM debian:latest
 
-ENV VERSION 0.2.10
+ENV VERSION 0.3.2
 
 RUN apt-get update && \
     apt-get install -y \
@@ -10,7 +10,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /jmusicbot && \
-    wget -q -O /jmusicbot/JMusicBot.jar https://github.com/jagrosh/MusicBot/releases/download/$VERSION/JMusicBot-$VERSION-Linux.jar
+    wget -q -O /jmusicbot/JMusicBot.jar https://github.com/jagrosh/MusicBot/releases/download/$VERSION/JMusicBot-$VERSION.jar
 
 COPY config.txt /jmusicbot/config.txt
 
