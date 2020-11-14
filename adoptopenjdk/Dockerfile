@@ -1,5 +1,4 @@
-ARG TAG=jre
-FROM adoptopenjdk/openjdk11:$TAG
+FROM adoptopenjdk:11-jre
 
 ENV VERSION 0.3.2
 
