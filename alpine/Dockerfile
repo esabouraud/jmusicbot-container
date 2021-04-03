@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV VERSION 0.3.3
+ENV VERSION 0.3.4
 
 RUN apk add --update --no-cache openjdk11-jre-headless libstdc++ ttf-dejavu && \
     rm -rf /var/cache/apk/*

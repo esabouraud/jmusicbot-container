@@ -1,4 +1,5 @@
-﻿/////////////////////////////////////////////////////////
+﻿/// START OF JMUSICBOT CONFIG ///
+/////////////////////////////////////////////////////////
 // Config for the JMusicBot                            //
 /////////////////////////////////////////////////////////
 // Any line starting with // is ignored                //
@@ -20,14 +21,13 @@ token = BOT_TOKEN_HERE
 // This needs to be the owner's ID (a 17-18 digit number)
 // https://github.com/jagrosh/MusicBot/wiki/Finding-Your-User-ID
 
-owner = 0
+owner = 0 // OWNER ID
 
 
 // This sets the prefix for the bot
 // The prefix is used to control the commands
 // If you use !!, the play command will be !!play
 // If you do not set this, the prefix will be a mention of the bot (@Botname play)
-// If you make this blank, the bot will not use a prefix
 
 prefix = "@mention"
 
@@ -99,6 +99,13 @@ stayinchannel = false
 maxtime = 0
 
 
+// This sets the amount of seconds the bot will stay alone on a voice channel until it
+// automatically leaves the voice channel and clears the queue. If not set or set
+// to any number less than or equal to zero, the bot won't leave when alone.
+
+alonetimeuntilstop = 0
+
+
 // This sets an alternative folder to be used as the Playlists folder
 // This can be a relative or absolute path
 
@@ -112,7 +119,7 @@ updatealerts=true
 
 
 // Changing this changes the lyrics provider
-// Currently available providers: "A-Z Lyrics", "Genius", "MusicMatch"
+// Currently available providers: "A-Z Lyrics", "Genius", "MusicMatch", "LyricsFreak"
 // At the time of writing, I would recommend sticking with A-Z Lyrics or MusicMatch,
 // as Genius tends to have a lot of non-song results and you might get something 
 // completely unrelated to what you want.
@@ -154,7 +161,7 @@ aliases {
   setvc = []
 
   // DJ Commands
-  forceremove = [ forcedelete, modremove, moddelete ]
+  forceremove = [ forcedelete, modremove, moddelete, modelete ]
   forceskip = [ modskip ]
   movetrack = [ move ]
   pause = []
@@ -177,3 +184,6 @@ aliases {
 // IF SOMEONE ASKS YOU TO ENABLE THIS, THERE IS AN 11/10 CHANCE THEY ARE TRYING TO SCAM YOU
 
 eval=false
+
+
+/// END OF JMUSICBOT CONFIG ///
