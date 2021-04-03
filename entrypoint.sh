@@ -11,6 +11,11 @@ if [ -z "$JMUSICBOT_OWNER" ]; then
 fi
 
 cd jmusicbot
+if [ -z "$JMUSICBOT_SERVERSETTINGS" ]; then
+    1>&2 echo "JMUSICBOT_SERVERSETTINGS environment variable is not set"
+else
+    echo "$JMUSICBOT_SERVERSETTINGS" > serversettings.json
+fi
 sed -i -E "s%^(token = ).*$%\1$JMUSICBOT_TOKEN%g" config.txt
 sed -i -E "s%^(owner = ).*$%\1$JMUSICBOT_OWNER%g" config.txt
 #sed -i -E "s%^(playlistsfolder = ).*$%\1/music/Playlists%g" config.txt
