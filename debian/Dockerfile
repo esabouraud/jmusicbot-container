@@ -1,6 +1,6 @@
 FROM debian:latest
 
-ENV VERSION 0.3.4
+ENV VERSION 0.3.5
 
 RUN apt-get update && \
     apt-get install -y \
