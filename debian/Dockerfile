@@ -2,7 +2,8 @@ FROM debian:latest
 
 ENV VERSION 0.3.6
 
-RUN apt-get update && \
+RUN apt-get clean && \
+    apt-get update && \
     apt-get install -y \
         wget \
         openjdk-11-jre-headless \

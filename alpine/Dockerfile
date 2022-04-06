@@ -2,7 +2,7 @@ FROM alpine:latest
 
 ENV VERSION 0.3.6
 
-RUN apk add --update --no-cache openjdk11-jre-headless libstdc++ ttf-dejavu && \
+RUN apk add --update --no-cache openjdk8-jre libstdc++ ttf-dejavu && \
     rm -rf /var/cache/apk/*
 
 RUN mkdir -p /jmusicbot && \
