@@ -1,6 +1,6 @@
 FROM debian:latest
 
-ENV VERSION 0.3.7
+ENV VERSION 0.3.9
 
 RUN apt-get clean && \
     apt-get update && \

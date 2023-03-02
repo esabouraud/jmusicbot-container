@@ -1,6 +1,6 @@
 FROM adoptopenjdk:11-jre
 
-ENV VERSION 0.3.7
+ENV VERSION 0.3.9
 
 ADD https://github.com/jagrosh/MusicBot/releases/download/$VERSION/JMusicBot-$VERSION.jar /jmusicbot/JMusicBot.jar
 
